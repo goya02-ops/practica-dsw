@@ -1,0 +1,40 @@
+git init: inicializar fichero
+
+git branch -m: cambiar el nombre de la rama main
+
+git add: añadir cambios realizados dentro de un fichero
+
+git commit: tomar foto del fichero
+
+git log: muestra el log de commits realizados
+
+git status: muestra el estado actual del fichero
+
+git checkout [hash/tag]: moverse a traves de los commits realizados. También sirve para voler al estado incial de un archivo
+
+git reset: devuelve al estado inicial del commit
+
+git config: configurar nuestro git
+  git config --global alias.tree "log --graph --decorate --all --oneline : configura la visualización del "git tree"
+
+git reset --hard [hash/tag]: vuelve a un commit previo, borrando así los creados después
+
+git reflog: log de interacciones realizadas
+
+git tag: asignar un tag a un commit para facilitar la navegabilidad
+
+git branch [nombre_nueva_rama]: crea una nueva rama
+
+git switch [nombre_rama]: me cambio de rama
+  Nota: con el checkout nos podemos desplazar también, pero no es lo correcto.
+  Si nos cambiamos de rama con el switch, es necesario que la misma esté descargada.
+
+git merge [nombre_rama_a_traer]: trae los cambios de la rama nombrada hacia la rama dónde estoy ubicado
+
+git stash: dejo guardado cambios que aun no guardé con el commit. Se utiliza en caso de que tenga que hacer switch a otra rama mientras dejo pendiente el trabajo de esta.
+
+git stash list: lista de stashs pendientes
+
+git stash pop: retomo el stash pendiente
+
+git stash drop: borro el stash pendiente
