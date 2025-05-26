@@ -1,0 +1,8 @@
+[2025-05-26T18:22:01.438Z] Request: GET /home.html
+[2025-05-26T18:22:01.445Z] 200 OK - /home.html
+[2025-05-26T18:41:33.898Z] Request: GET /
+[2025-05-26T18:41:33.905Z] Error: EISDIR: illegal operation on a directory, read
+[2025-05-26T18:41:57.981Z] Server is running on http://localhost:3000
+[2025-05-26T18:43:53.112Z] Server is running on http://localhost:3000
+[2025-05-26T18:43:56.021Z] Request: GET /index.html
+[2025-05-26T18:43:56.036Z] 200 OK - /index.html
