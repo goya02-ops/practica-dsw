@@ -1,9 +1,11 @@
 import http from 'node:http'
 import fs from 'node:fs/promises'
+//import fss from 'node:fs'
 
 
 async function readResource(resourcePath) {
   // Read the file and parse it as JSON
+//  const data =  fss.readFileSync(`.${resourcePath}`, 'utf-8')
   const data = await fs.readFile(`.${resourcePath}`, 'utf-8')
   return data
 }

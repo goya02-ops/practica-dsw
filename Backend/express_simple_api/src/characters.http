@@ -1,0 +1,53 @@
+###obtener characters
+GET http://localhost:3000/api/characters
+###obtener character por id
+GET http://localhost:3000/api/characters/94b98090-dfed-43b7-bf23-74de682b54f3
+
+###crear character
+POST http://localhost:3000/api/characters
+content-type: application/json
+
+{
+  "name": "Anakin Skywalker",
+  "characterClass": "Jedi",
+  "level": 5,
+  "hp": 100,
+  "mana": 50,
+  "attack": 20,
+  "items": [
+    "lightsaber",
+    "jedi_robe"
+  ]
+
+}
+
+###modficicar character (PUT)
+PUT http://localhost:3000/api/characters/8ff8c42e-fa2f-4ec3-8496-5ef575cb26ef
+content-type: application/json
+
+{
+  "name": "Darth Vader",
+  "characterClass": "Sith",
+  "level": 6,
+  "hp": 120,
+  "mana": 60,
+  "attack": 25,
+  "items": [
+    "lightsaber",
+    "jedi_robe",
+    "force_crystal",
+    "death_star_plan"
+  ]
+}
+
+###modiificar parcialmente character (PATCH - recurso parcial - incremetal)
+PATCH http://localhost:3000/api/characters/8ff8c42e-fa2f-4ec3-8496-5ef575cb26ef
+content-type: application/json
+
+{
+  "name": "Anakin Skywalker",
+  "characterClass": "Jedi"
+}
+
+###eliminar character
+DELETE http://localhost:3000/api/characters/8219f65d-2e15-46ab-af2f-0809454b2603

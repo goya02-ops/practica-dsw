@@ -6,3 +6,17 @@
 [2025-05-26T18:43:53.112Z] Server is running on http://localhost:3000
 [2025-05-26T18:43:56.021Z] Request: GET /index.html
 [2025-05-26T18:43:56.036Z] 200 OK - /index.html
+[2025-05-26T20:19:21.584Z] Server is running on http://localhost:3000
+[2025-05-26T20:20:02.421Z] Request: GET /index.html
+[2025-05-26T20:20:02.432Z] Error: The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of Promise
+[2025-05-26T20:22:15.413Z] Server is running on http://localhost:3000
+[2025-05-26T20:22:19.050Z] Request: GET /index.html
+[2025-05-26T20:22:19.053Z] Error: The "cb" argument must be of type function. Received type string ('utf-8')
+[2025-05-26T20:23:40.720Z] Server is running on http://localhost:3000
+[2025-05-26T20:23:44.877Z] Request: GET /index.html
+[2025-05-26T20:23:44.896Z] 200 OK - /index.html
+[2025-05-26T20:24:56.712Z] Request: GET /index.html
+[2025-05-26T20:24:56.717Z] 200 OK - /index.html
+[2025-05-26T20:25:02.657Z] Server is running on http://localhost:3000
+[2025-05-26T20:25:05.523Z] Request: GET /index.html
+[2025-05-26T20:25:05.538Z] 200 OK - /index.html
