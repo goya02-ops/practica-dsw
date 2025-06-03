@@ -1,5 +1,5 @@
 import express, { Request, Response, NextFunction } from 'express'
-import { Character } from './characters.js'
+import { Character } from './character/characters.js'
 
 const app = express()
 app.use(express.json()) //middleware to parse JSON bodies
