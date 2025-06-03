@@ -1,7 +1,7 @@
 ###obtener characters
 GET http://localhost:3000/api/characters
 ###obtener character por id
-GET http://localhost:3000/api/characters/94b98090-dfed-43b7-bf23-74de682b54f3
+GET http://localhost:3000/api/characters/8219f65d-2e15-46ab-af2f-0809454b2603
 
 ###crear character
 POST http://localhost:3000/api/characters
