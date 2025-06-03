@@ -1,6 +1,7 @@
 import express, { Request, Response, NextFunction } from 'express'
 import { Character } from './character/charactersEntity.js'
 import { CharacterRepository } from './character/character.repository.js'
+import { characterRouter } from './character/character.routes.js'
 
 const app = express()
 app.use(express.json()) //middleware to parse JSON bodies
@@ -8,39 +9,9 @@ app.use(express.json()) //middleware to parse JSON bodies
 
 const repository = new CharacterRepository()
 
-const characters = [
-  new Character('Aragorn', 'Ranger', 10, 100, 50, 20, ['Sword', 'Shield'],'8219f65d-2e15-46ab-af2f-0809454b2603'),
-  new Character('Gandalf', 'Wizard', 20, 80, 100, 15, ['Staff', 'Robe'], 'b2c1f5d3-4e8a-4c9b-8f0d-6c7e1f2a3b4c'),
-]
+app.use('/api/characters', characterRouter)
 
-function sanitizeCharacterInput(req: Request,res: Response, next: NextFunction){
-
-  // an other middleware to sanitize the input
-  req.body.sanitizeInput = {
-    name: req.body.name,
-    characterClass: req.body.characterClass,
-    level: req.body.level,
-    hp: req.body.hp,
-    mana: req.body.mana,
-    attack: req.body.attack,
-    items: req.body.items
-  }
-  // You can add more sanitization logic here if needed
-
-  // Remove undefined properties from the method Patch
-  Object.keys(req.body.sanitizeInput).forEach(key => {
-    if (req.body.sanitizeInput[key] === undefined) delete req.body.sanitizeInput[key]
-  })
-
-  next()
-}
-
-//get all
-app.get('/api/characters', (req, res) => {
-  res.json({data: repository.getAll()})
-  //res.json({data: characters})
-})
-
+/*
 //get one
 app.get('/api/characters/:id', (req, res) => {
   const character = repository.getOne({id: req.params.id})
@@ -113,7 +84,7 @@ app.delete('/api/characters/:id', (req, res) => {
     return
   }
   res.status(200).send({message: 'Character Deleted'})
-})
+})*/
 
 app.use((_, res) =>{
   res.status(404).json({ message: 'Resource not Found' })
