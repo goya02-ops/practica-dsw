@@ -33,7 +33,6 @@ export class CharacterRepository implements Repository<Character> {
       const deletedCharacter = characters[index];
       characters.splice(index, 1);
       return deletedCharacter
-    }
-    return undefined;
+    };
   }
 }

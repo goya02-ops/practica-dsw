@@ -22,7 +22,7 @@ content-type: application/json
 }
 
 ###modficicar character (PUT)
-PUT http://localhost:3000/api/characters/8ff8c42e-fa2f-4ec3-8496-5ef575cb26ef
+PUT http://localhost:3000/api/characters/3d2e3fe4-6677-43a3-bf68-8be4fb7b5615
 content-type: application/json
 
 {
@@ -41,7 +41,7 @@ content-type: application/json
 }
 
 ###modiificar parcialmente character (PATCH - recurso parcial - incremetal)
-PATCH http://localhost:3000/api/characters/8ff8c42e-fa2f-4ec3-8496-5ef575cb26ef
+PATCH http://localhost:3000/api/characters/3d2e3fe4-6677-43a3-bf68-8be4fb7b5615
 content-type: application/json
 
 {
